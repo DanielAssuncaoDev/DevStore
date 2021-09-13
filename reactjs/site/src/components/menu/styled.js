@@ -6,6 +6,7 @@ const Container = styled.div`
     
     background-color: #2B3031;
     
+    width: 24.72%;
     height: 100vh;
     padding-bottom: 0em;
 
@@ -25,6 +26,8 @@ const Container = styled.div`
 
     .svg-cabecalho-left-box {
         border-right: 10px solid transparent;
+        display: flex;
+        align-items: center;
     }
 
     .devSchool {
@@ -34,12 +37,12 @@ const Container = styled.div`
     }
 
     .devSchool span {
-        color: #EA10C7;
+        color: #10EAEA;
     }
 
     .black-box {
         background-color: #262626;
-        width: 356px;
+        width: 100%;
         height: 61px;
     }
 
@@ -47,17 +50,16 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-        
+        justify-content: space-between;        
         
         height: 70px;
+        padding: 0 1.5em 0 2.1em;
     }
 
     .left-box-management div {
         color: white;
         font-size: 18px;
         font-weight: 800;
-        margin-left: 1em;
     }
 
     .left-box-aluno {
@@ -67,15 +69,15 @@ const Container = styled.div`
         height: 55px;
 
         background-color: white;
-        border-left: 4px solid  #EA10C7;
+        border-left: 4px solid  #10EAEA;
 
         color: #1A1A1A;
         font-size: 18px;
-        
+
 
         align-items: center;
 
-        padding-left: 4.3em;
+        padding-left: 1.8em;
 
     }
     .left-box-aluno div {

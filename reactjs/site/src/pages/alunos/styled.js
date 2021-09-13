@@ -4,11 +4,12 @@ const Container = styled.div`
 
     display: flex;
     flex-direction: row;
-    min-width: 100%;
+    width: 100%;
 
     .new-student-box {
         display: flex;
         flex-direction: column;
+
 
         background-color: white;
         box-shadow: 0px 0px 4px 1px rgba(186, 186, 186, 0.25);
@@ -17,10 +18,10 @@ const Container = styled.div`
     }
 
     .bar-new-student {
-        border: 3px solid #986CDF;
+        border: 3px solid #119FDC;
         border-radius: .5em;
         margin-right: .4em;
-        background-color: #986CDF;
+        background-color: #119FDC;
     }
 
     .text-new-student {
@@ -33,9 +34,18 @@ const Container = styled.div`
         font-weight: bolder;
     }
 
-    .input-new-student {
+    .form-new-product {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .input-new-student {
+        display: flex;
+        flex-direction: column;
+
+        width: min-content;
+
         padding-top: 2.4em;
     }
 
@@ -49,16 +59,59 @@ const Container = styled.div`
         margin-bottom: .5em;
     }
 
-    .input-left {
+
+    .culumns-inputs{
         display: flex;
-        flex-direction: column;
-        margin-right: 3em;
+
+        margin-left: 17px;
     }
 
-    .input-right {
+    .input-one, 
+    .input-two{
         display: flex;
         flex-direction: column;
-        margin-bottom: 1em;
+        align-items: flex-end;
+        margin-right: 3em;
+
+    } .input-two {
+        margin: 0;
+    }
+
+    .textarea-one {
+        margin-left: 17px;
+    }
+
+    .textarea-one .agp-input{
+        display: flex;
+        align-items: flex-start;
+
+        width: 100%;
+    }
+
+    .input-linkImg,
+    .input-linkImg input{
+        width: 100%;
+
+        margin-top: .25em;
+        margin-bottom: .25em;
+    }
+
+    .textarea {
+        width: 100%;
+    }
+
+    textarea {
+        margin-top: .25em;
+
+        width: 100%;
+        height: 150px;
+        border-radius: 5px;
+        border: 1px solid #A8A8A8;
+        padding: .5em;
+
+        font-size: 1em;
+        color: #615858;
+        font-weight: 400;
     }
 
     input {
@@ -71,6 +124,9 @@ const Container = styled.div`
         border-radius: 5px;
         padding-left: .5em;
 
+        font-size: 1em;
+        color: #615858;
+        font-weight: 400;
     }
 
     .name-student {
@@ -82,11 +138,29 @@ const Container = styled.div`
     }
 
 
+    .link-image {
+        margin-right: 7px;
+        font-size: 18px;
+        color: #615858;
+        font-weight: 800;
+
+        width: 131px;
+    }
+
     .number-student {
         font-size: 18px;
         color: #615858;
         width: 5.5em;
         font-weight: 800;
+    }
+
+    .ds-product {
+        font-size: 18px;
+        color: #615858;
+        font-weight: 800;
+
+        margin-right: 0.8em;
+        margin-top: 10px;
     }
 
     .class-student {
@@ -104,17 +178,20 @@ const Container = styled.div`
     }
 
 
-    .button-create {
+    .button-create{
+        text-align: right;
+
         align-self: flex-end;
-        justify-self: flex-end;
-        padding-bottom: 1.5em;
+        justify-items: flex-end;
+        padding-top: 10px; 
     }
+   
 
     .button-create  button {
         width: 106px;
         height: 36px;
 
-        background: #E911C6;
+        background: #119FDC;
         border-radius: 44px;
         border: none;
         color: white;
@@ -221,7 +298,7 @@ const Container = styled.div`
     }
 
     thead {
-        background-color: #986CDF;
+        background-color: #6CC3DF;
     }
 
     table {
@@ -231,7 +308,26 @@ const Container = styled.div`
 
     tbody {
         background-color: #F5F5F5;
+        width: 100%;
+
+
+        tr {
+            width: 100%;
+        }
+
+        tr:nth-child(even){
+            background-color: #fff;
+        }
+
+        tr:hover {
+            td:nth-child(7) button, 
+            td:nth-child(8) button {
+                visibility: visible;
+            }
+        }
     }
+
+
 
     td {
         text-align: left;
@@ -249,26 +345,35 @@ const Container = styled.div`
         font-weight: 800;
     } 
     
+    .Image-product{
+        width: 40px;
+
+        img {
+            height: 40px;
+        }
+
+    }
+
     .table-user {
         border-collapse: collapse;
     }
 
-    .linha-alternada {
-        background-color: #fff;
-    }
 
     .coluna-acao {
         width: .1em;
     }
+        td:nth-child(7) button, 
+        td:nth-child(8) button {
+            visibility: hidden;
+        }
+
+    
 
     button {
         cursor: pointer;
     }
 
-    .button-create button:hover {
-        background-color: #aa3997;
-        transition: 2s;
-    }
+
 
     img {
         cursor: pointer;
@@ -306,7 +411,12 @@ const Container = styled.div`
 const Conteudo = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75.28%;
+
+
+    
+ 
+
 `
 
 export { Container, Conteudo }

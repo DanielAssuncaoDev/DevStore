@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
     .reader-right-box {
         display: flex;
         flex-direction: row;
@@ -14,6 +19,11 @@ const Container = styled.div`
     .user-name  {
         padding-left: 1em;
         font-size: 16px;
+        color: #4a4a4a;
+    }
+
+    .absolute {
+        background-color: #119FDC !important;
     }
 
     .user-name b {
@@ -26,7 +36,7 @@ const Container = styled.div`
 
     .left-button button {
         border-radius: 50%;
-        background-color: #986CDF;
+        background-color: #119FDC;
         width: 44px;
         height: 44px;
         border: none;
@@ -35,7 +45,7 @@ const Container = styled.div`
 
     .refresh-button button {
         border-radius: 50%;
-        background-color: #986CDF;
+        background-color: #119FDC;
         width: 44px;
         height: 44px;
         border: none;
