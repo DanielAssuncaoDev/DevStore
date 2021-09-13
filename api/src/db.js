@@ -13,5 +13,5 @@ import Sequelize from 'sequelize';
         }
     )
 
-const db = sequelize(initidb);
+const db = initidb(sequelize);
 export default db;
