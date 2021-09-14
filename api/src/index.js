@@ -32,6 +32,19 @@ app.use(express.json());
             } = req.body;
 
 
+            let produtoRp = await db.tb_produto.findAll({
+                where: {nm_produto: nome}
+            })
+
+                console.log(produtoRp)
+
+
+                if (produtoRp.length != 0 ){
+                    resp.send({erro: 'Este produto ja foi cadastrado!'})
+                    return
+                }
+                
+
             let inserirProdutos = {
                 nm_produto: nome,
                 ds_categoria: categoria,
@@ -47,7 +60,7 @@ app.use(express.json());
 
 
             let r = await db.tb_produto.create(inserirProdutos);
-            resp.send(r);
+            resp.sendStatus(200);
 
         } catch (e) {
             resp.send({erro: e.toString()});
